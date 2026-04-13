@@ -19,10 +19,15 @@ O projeto está organizado em pacotes seguindo uma separação de responsabilida
 
 org.example
 │
+
 ├── DB              → Conexão com banco de dados
+
 ├── model           → Representação dos dados (entidades)
+
 ├── repository      → Acesso aos dados (consulta SQL)
+
 ├── Server          → Regras de negócio e geração do Excel
+
 └── Main            → Execução do sistema
 
 
@@ -181,9 +186,13 @@ public static void main(String[] args)
 
 🔹 Fluxo:
 Instancia o repositório
+
 Busca dados do banco
+
 Gera o arquivo Excel
+
 LinhasRepository repo = new LinhasRepository();
+
 List<Linhas> dados = repo.buscarTodos();
 
 new CriaArquivoExcel().criarArquivo("relatorioTest.xlsx", dados);
