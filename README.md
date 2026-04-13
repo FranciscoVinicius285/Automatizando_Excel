@@ -73,13 +73,21 @@ Representa os dados de operação dos ônibus.
 
 🔹 Atributos:
 dataMes → data da operação
+
 linha → identificação da linha
+
 onibus → veículo
+
 itinerarios → trajeto
+
 problemasRoleta
+
 problemasKm
+
 semAbertura
+
 viagensPrevistas
+
 viagensConcluidas
 
 
@@ -135,12 +143,19 @@ Responsável por criar o arquivo Excel automaticamente.
 🔹 Método principal:
 public void criarArquivo(String nomeArquivo, List<Linhas> linhas)
 🔹 Etapas:
+
 Cria o arquivo Excel (XSSFWorkbook)
+
 Cria uma planilha
+
 Adiciona cabeçalho
+
 Percorre os dados
+
 Preenche as células
+
 Aplica regras de negócio
+
 Salva o arquivo
 🔹 Métodos auxiliares:
 ➤ adicionarCabecalho
