@@ -1,5 +1,6 @@
-Automatização de Tarefas no Excel
-📌 1. Introdução
+<h1>Automatização de Tarefas no Excel</h1>
+---------------------------------
+<h3>📌 1. Introdução</h3>
 
 Este projeto tem como objetivo automatizar tarefas no Excel, permitindo a extração de dados de um banco de dados PostgreSQL e a geração automática de relatórios em formato .xlsx.
 
@@ -11,8 +12,8 @@ Aplicação de regras de negócio
 Geração de planilhas Excel automatizadas
 
 Esse tipo de solução reduz trabalho manual e melhora a produtividade na análise de dados.
-
-🏗️ 2. Estrutura do Projeto
+-----------------------------------
+<h3>🏗️ 2. Estrutura do Projeto</h3>
 
 O projeto está organizado em pacotes seguindo uma separação de responsabilidades:
 
@@ -23,8 +24,8 @@ org.example
 ├── repository      → Acesso aos dados (consulta SQL)
 ├── Server          → Regras de negócio e geração do Excel
 └── Main            → Execução do sistema
-
-🔌 3. Dependências do Projeto (Maven)
+----------------------------
+<h3>🔌 3. Dependências do Projeto (Maven)</h3>
 📦 PostgreSQL
 <dependency>
     <groupId>org.postgresql</groupId>
@@ -42,8 +43,8 @@ Permite executar comandos SQL via Java.
 Biblioteca usada para criar e manipular arquivos Excel (.xlsx).
 Permite criar planilhas, linhas, células e escrever dados.
 
-
-🔗 4. Camada de Banco de Dados
+-----------------------------
+<h3>🔗 4. Camada de Banco de Dados</h3>
 📌 Classe: ConnectionFactory
 
 Responsável por criar conexões com o banco.
@@ -54,8 +55,8 @@ Responsável por criar conexões com o banco.
 
 Classe utilizada para testar se a conexão está funcionando.
 
-
-📊 5. Camada de Modelo
+------------------------------
+<h3>📊 5. Camada de Modelo</h3>
 📌 Classe: Linhas
 
 Representa os dados de operação dos ônibus.
@@ -72,8 +73,8 @@ viagensPrevistas
 viagensConcluidas
 🔹 Função:
 Servir como estrutura de dados (DTO/Entidade)
-
-🗄️ 6. Camada de Repositório
+-------------
+<h3>🗄️ 6. Camada de Repositório</h3>
 📌 Classe: LinhasRepository
 
 Responsável por buscar dados no banco.
@@ -88,8 +89,8 @@ Converte cada linha em um objeto Linhas
 Retorna uma lista com todos os dados
 
 ✔ Aqui ocorre a integração com o banco de dados
-
-⚙️ 7. Regras de Negócio
+-------------------
+<h3>⚙️ 7. Regras de Negócio</h3>
 📌 Classe: RegrasLinhas
 
 Responsável por aplicar lógica sobre os dados.
@@ -104,8 +105,8 @@ Se taxa > 20% → retorna 1 (problema)
 Senão → retorna 0 (sem problema)
 
 ✔ Essa regra transforma dados brutos em indicadores (binário)
-
-📄 8. Geração do Excel
+--------------------
+<h3>📄 8. Geração do Excel</h3>
 📌 Classe: CriaArquivoExcel
 
 Responsável por criar o arquivo Excel automaticamente.
@@ -132,8 +133,8 @@ Adiciona texto na célula.
 ➤ adicionarCelulaInt
 
 Adiciona números na célula.
-
-🚀 9. Classe Principal (Execução)
+------------------------------
+<h3>🚀 9. Classe Principal (Execução)</h3>
 
 📌 Classe: teste
 🔹 Método main:
@@ -146,8 +147,8 @@ LinhasRepository repo = new LinhasRepository();
 List<Linhas> dados = repo.buscarTodos();
 
 new CriaArquivoExcel().criarArquivo("relatorioTest.xlsx", dados);
-
-🔄 10. Fluxo Geral do Sistema
+---------------------
+<h3>🔄 10. Fluxo Geral do Sistema</h3>
 Banco de Dados (PostgreSQL)
         ↓
 LinhasRepository (consulta SQL)
