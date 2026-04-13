@@ -62,9 +62,9 @@ public class CriaArquivoExcel {
         adicionarCelulaString(linha, 1, "LINHA");
         adicionarCelulaString(linha, 2, "ONIBUS");
         adicionarCelulaString(linha, 3, "ITINERARIA");
-        adicionarCelulaString(linha, 4, "PROBLEMAS ROLETA");
-        adicionarCelulaString(linha, 5, "PROBLEMAS KILOMETRAGEM");
-        adicionarCelulaString(linha, 6, "PROBLEMAS DE ABERTURA");
+        adicionarCelulaString(linha, 4, "PROBLEMA DE ROLETA");
+        adicionarCelulaString(linha, 5, "PROBLEMA DE KILOMETRAGEM");
+        adicionarCelulaString(linha, 6, "PROBLEMA DE ABERTURA");
         adicionarCelulaString(linha, 7, "VIAGENS PREVISTAS");
         adicionarCelulaString(linha, 8, "VIAGENS CONCLUIDAS");
     }
